@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-red: #B32137;
+    --clr-purple: #81256C;
+}
+
+.events--container {
+    margin: 0 auto;
+}
+
+.event--item {
+    background: linear-gradient(45deg, var(--clr-red), var(--clr-purple));
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: 60px;
+    margin-top: 36px;
+    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.event--img1 {
+    width: 446.4px;
+    height: 301.6px;
+    background-image: url('/images/Typewriting\ event.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.25);
+    transform-origin: right;
+    border-radius: 70px;
+}
+
+.event--img2 {
+    width: 446.4px;
+    height: 301.6px;
+    background-image: url('/images/Mandarin\ chinese.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.25) translateX(20%);
+    transform-origin: right;
+    border-radius: 70px;
+}
+
+.event--img3 {
+    width: 446.4px;
+    height: 301.6px;
+    background-image: url('/images/english\ conversation\ group.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.25);
+    transform-origin: right;
+    border-radius: 70px;
+}
+
+.event--img4 {
+    width: 446.4px;
+    height: 301.6px;
+    background-image: url('/images/Cultural\ Exchange.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.25) translateX(20%);
+    transform-origin: right;
+    border-radius: 70px;
+}
+
+.event--title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.event--desc--container {
+    max-width: 1300px;
+    max-height: 300px;
+    padding-left: 60px;
+    padding-bottom: 5px;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .event--item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5em auto;
+        max-width: 70vw;
+    }
+
+    .event--item:nth-last-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .event--item:nth-last-child(2) {
+        flex-direction: column-reverse;
+    }
+
+
+
+    .event--img1{
+        max-width: 70vw;
+        transform-origin: center;
+        transform: scale(1.2) translateY(-10%);
+    }
+
+    .event--img2{
+        max-width: 70vw;
+        transform-origin: center;
+        transform: scale(1.2) translateY(-10%);
+
+    }
+
+    .event--img3{
+        max-width: 70vw;
+        transform-origin: center;
+        transform: scale(1.2) translateY(-10%);
+    }
+
+    .event--img4{
+        max-width: 70vw;
+        transform-origin: center;
+        transform: scale(1.2) translateY(-10%);    
+    }
+
+
+    .event--desc--container {
+        padding: 1em;
+    }
+}
