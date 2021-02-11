@@ -10,7 +10,7 @@
 }
 
 .events--container {
-    margin: 0 auto;
+    margin: 0;
 }
 
 .event--item {
@@ -25,7 +25,6 @@
     border-radius: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
 
 .event--img1 {
@@ -42,7 +41,7 @@
 .event--img2 {
     width: 446.4px;
     height: 301.6px;
-    background-image: url('/images/Mandarin\ chinese.jpg');
+    background-image: url('/images/mandarinchinese.jpg');
     background-size: cover;
     background-position: center;
     transform: scale(1.25) translateX(20%);
@@ -79,13 +78,19 @@
 }
 
 .event--desc--container {
-    padding-left: 60px;
-    padding-bottom: 5px;
+    max-width: 666px;
+    padding-left: 50px;
 }
 
 .library--container {
     margin: 0 auto;
 }
+
+.event--item:nth-child(2), .event--item:nth-child(4) {
+    justify-content: flex-start;
+    gap: 100px;
+}
+
 
 .library--item1 {
     background: linear-gradient(45deg, var(--clr-red), var(--clr-purple));
@@ -181,37 +186,45 @@
     padding-right: 100px;
     padding-left: 50px;
     padding-bottom: 10px;
-    transform: translateX(-30%);
 }
 
 .world--icon{
-    transform: scale(1.25) translateX(-140%) translateY(130%);  
+    display: inline;
+    height: 30px;
+    width: 30px;
 }
 
 
 .library--location{
     font-size: 30px;
-    transform: translateX(65%) translateY(-20%);
+    display: flex;
+    gap: 10px;
 }
 
 .phone--icon{
+    display: inline;
     height: 24px;
     width: 24px;
-    transform: scale(1) translateX(-165%) translateY(150%); 
+ 
 }
 
 .library--phone{
     font-size: 30px;
-    transform: translateX(65%) translateY(-20%);
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
 }
 
 .email--icon{
-    transform: scale(1.25) translateX(-125%) translateY(120%); 
+    width: 25px;
+    height: 25px;
 }
 
 .library--email{
     font-size: 30px;
-    transform: translateX(65%) translateY(-75%);
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
 }
 
 
@@ -219,20 +232,18 @@
 
 @media (max-width: 800px) {
     .event--item {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
-        align-items: center;
-        margin: 5em auto;
-        max-width: 70vw;
+        max-width: 7px;
     }
 
     
         .event--item:nth-child(2) {
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
         
         .event--item:nth-child(4) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         }
 
     .event--img1{
@@ -276,6 +287,10 @@
         height: 700px;
     }
 
+    .event--item:nth-child(2), .event--item:nth-child(4) {
+        gap: 0;
+    }
+
     .library--img1{
         width: 450px;
         height: 300px;
@@ -287,7 +302,7 @@
         width:450px;
         height:300px;
         transform-origin: center;
-        transform: scale(1.25);
+        transform: scale(1.25) translateY(-25%);
     }
 
     .library--item2 {
@@ -307,12 +322,17 @@
 
     .library--title2 {
         font-size: 40px;
-        transform: translateX(40%) translateY(50%);
+        transform:  translateY(-10%);
+        transform-origin: left;
     }
 
     .library--desc--container2{
-        transform: translateX(-50%);
+        transform: translateX(-20%);
 
     }
+    
+    
+
+    
 
 }
