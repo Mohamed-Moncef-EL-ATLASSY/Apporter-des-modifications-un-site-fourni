@@ -326,6 +326,7 @@
 
     .library--desc {
         font-size: 17px;
+        transform: translateX(20%);
 
     }
 
@@ -336,7 +337,7 @@
     }
 
     .library--desc--container2 {
-        transform: translateX(-20%);
+        transform: translateX(-35%);
 
     }
 
